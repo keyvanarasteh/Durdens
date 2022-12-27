@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import "screens/carDetailScreen.dart";
 
 void main() {
   runApp(const MyApp());
@@ -6,8 +7,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  get carDetailScreen => null;
 
   // This widget is the root of your application.
   @override
@@ -27,7 +26,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: carDetailScreen,
+      home: CarDetailScreen(),
     );
   }
 }
