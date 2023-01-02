@@ -7,6 +7,7 @@ class CarDetailScreen extends StatefulWidget {
   State<CarDetailScreen> createState() => _CarDetailScreenState();
 }
 
+//merhaba
 class _CarDetailScreenState extends State<CarDetailScreen> {
   String? marka;
   List<String> tur = [];

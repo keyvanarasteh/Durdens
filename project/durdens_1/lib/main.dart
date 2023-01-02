@@ -1,3 +1,4 @@
+import 'package:durdens_1/screens/homeScreen.dart';
 import 'package:flutter/material.dart';
 import "screens/carDetailScreen.dart";
 
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: CarDetailScreen(),
+      home: HomeScreen(),
     );
   }
 }
