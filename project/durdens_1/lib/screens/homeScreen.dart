@@ -18,11 +18,25 @@ class _nameState extends State<HomeScreen> {
       // ignore: duplicate_ignore
       appBar: AppBar(
           actions: [
-            CircleAvatar(
-              radius: 50,
-              backgroundColor: Colors.transparent,
-              backgroundImage: AssetImage("assets/images/profile.png"),
-            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 10),
+              child: IconButton(
+                  icon: Icon(
+                    Icons.person_outline,
+                    color: Colors.black,
+                    size: 30,
+                  ),
+                  onPressed: () {
+                    showDialog(
+                        context: context,
+                        builder: (context) {
+                          return AlertDialog(
+                            title: const Text('Profile'),
+                            content: const Text('Profilim'),
+                          );
+                        });
+                  }),
+            )
           ],
           leading: Icon(
             Icons.menu,
@@ -36,21 +50,70 @@ class _nameState extends State<HomeScreen> {
             style: const TextStyle(color: Colors.black),
           ),
           backgroundColor: Colors.yellow),
-      body: Container(
-          child: Container(
-        height: double.infinity,
-        width: double.infinity,
-        alignment: Alignment.topCenter,
-        child: TextField(
-          decoration: InputDecoration(
-            icon: Icon(Icons.search),
-            hintText: 'Arama yapın...',
+      // ignore: avoid_unnecessary_containers
+      body: Column(children: [
+        Container(
+          height: 50,
+          width: 300,
+          child: TextField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              hintText: 'Arama yapın...',
+              prefixIcon: Icon(Icons.search),
+            ),
+            onChanged: (value) {
+              // Kullanıcının girdiği değer burada işlenir
+            },
           ),
         ),
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(25), topRight: Radius.circular(25))),
-      )),
+        Column(
+          children: [
+            Container(
+              child: Row(children: [
+                Container(
+                  height: 100,
+                  width: 100,
+                  color: Colors.red,
+                  child: Text(
+                    "Acil",
+                  ),
+                )
+              ]),
+            )
+          ],
+        ),
+        Container(
+          child: Row(children: [
+            Expanded(
+                child: Container(
+              margin: const EdgeInsets.all(10.0),
+              height: 70,
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 187, 190, 195),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Row(children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 8),
+                  child: Icon(
+                    Icons.home,
+                    size: 50,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 25),
+                  child: Text(
+                    "Emlak",
+                    style: TextStyle(fontSize: 25),
+                  ),
+                )
+              ]),
+            ))
+          ]),
+        ),
+      ]),
     );
   }
 }
