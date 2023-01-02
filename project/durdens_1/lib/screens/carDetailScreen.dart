@@ -21,7 +21,7 @@ class _CarDetailScreenState extends State<CarDetailScreen> {
         ),
         backgroundColor: Colors.yellow,
         leading: GestureDetector(
-          onTap: () {/* Write listener code here */}
+          onTap: () {/* Write listener code here */},
           child: Icon(
             Icons.menu, // add custom icons also
           ),
