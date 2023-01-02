@@ -1,4 +1,13 @@
 import 'package:durdens_1/screens/homeScreen.dart';
+import 'package:durdens_1/screens/widgetScreen.dart';
+import 'package:durdens_1/widgets/card.dart';
+import 'package:durdens_1/widgets/choiceChip.dart';
+import 'package:durdens_1/widgets/dropdownButton.dart';
+import 'package:durdens_1/widgets/opacity.dart';
+import 'package:durdens_1/widgets/rangeSlider.dart';
+import 'package:durdens_1/widgets/slider.dart';
+import 'package:durdens_1/widgets/tabbar.dart';
+import 'package:durdens_1/widgets/wrap.dart';
 import 'package:flutter/material.dart';
 import "screens/carDetailScreen.dart";
 
@@ -25,9 +34,9 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.yellow,
       ),
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }
