@@ -139,7 +139,7 @@ class _widgetsState extends State<widgets> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const cardscreen()),
+                              builder: (context) => const choiceChipscreen()),
                         );
                       },
                       child: Text(
