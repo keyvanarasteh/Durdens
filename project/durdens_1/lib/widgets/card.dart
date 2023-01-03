@@ -4,10 +4,10 @@ class cardscreen extends StatefulWidget {
   const cardscreen({super.key});
 
   @override
-  State<cardscreen> createState() => _cardscreenState();
+  State<cardscreen> createState() => _cardscreen();
 }
 
-class _cardscreenState extends State<cardscreen> {
+class _cardscreen extends State<cardscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

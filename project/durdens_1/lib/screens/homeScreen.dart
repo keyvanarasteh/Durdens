@@ -41,19 +41,16 @@ class _nameState extends State<HomeScreen> {
                   icon: Icon(
                     Icons.menu,
                     color: Colors.black,
-                  ) //Icon button ekledik
-                  ),
+                  )),
             ],
           ),
           centerTitle: true,
-          // ignore: prefer_const_constructors
           title: Text(
             "Sahibinden.com",
             textAlign: TextAlign.center,
             style: const TextStyle(color: Colors.black),
           ),
           backgroundColor: Colors.yellow),
-      // ignore: avoid_unnecessary_containers
       body: Column(children: [
         Expanded(
           flex: 1,
@@ -70,9 +67,7 @@ class _nameState extends State<HomeScreen> {
                   hintText: 'Arama yapın...',
                   prefixIcon: Icon(Icons.search),
                 ),
-                onChanged: (value) {
-                  // Kullanıcının girdiği değer burada işlenir
-                },
+                onChanged: (value) {},
               ),
             ),
           ),
@@ -92,12 +87,10 @@ class _nameState extends State<HomeScreen> {
                         child: Column(
                       children: [Icon(Icons.warning_outlined), Text("Acil")],
                     )),
-                    margin: const EdgeInsets.all(
-                        10), //Dışarıya müdahale eder (Kenarlara Boşluk)
+                    margin: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                        color: Colors.red, //rengini değiştirir
-                        // ignore: prefer_const_literals_to_create_immutables
-                        shape: BoxShape.rectangle, //şekili daire yapar
+                        color: Colors.red,
+                        shape: BoxShape.rectangle,
                         borderRadius: BorderRadius.all(Radius.circular(15))),
                   ),
                   Container(
@@ -110,13 +103,10 @@ class _nameState extends State<HomeScreen> {
                         Text("Fiyatı düşenler")
                       ],
                     )),
-                    margin: const EdgeInsets.all(
-                        10), //Dışarıya müdahale eder (Kenarlara Boşluk)
+                    margin: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                        color: Color.fromARGB(
-                            255, 8, 233, 180), //rengini değiştirir
-                        // ignore: prefer_const_literals_to_create_immutables
-                        shape: BoxShape.rectangle, //şekili daire yapar
+                        color: Color.fromARGB(255, 8, 233, 180),
+                        shape: BoxShape.rectangle,
                         borderRadius: BorderRadius.all(Radius.circular(15))),
                   ),
                   Container(
@@ -129,13 +119,10 @@ class _nameState extends State<HomeScreen> {
                         Text("Son 48 saat")
                       ],
                     )),
-                    margin: const EdgeInsets.all(
-                        10), //Dışarıya müdahale eder (Kenarlara Boşluk)
+                    margin: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                        color: Color.fromARGB(
-                            255, 63, 143, 209), //rengini değiştirir
-                        // ignore: prefer_const_literals_to_create_immutables
-                        shape: BoxShape.rectangle, //şekili daire yapar
+                        color: Color.fromARGB(255, 63, 143, 209),
+                        shape: BoxShape.rectangle,
                         borderRadius: BorderRadius.all(Radius.circular(15))),
                   ),
                   Container(
@@ -145,12 +132,10 @@ class _nameState extends State<HomeScreen> {
                         child: Column(
                       children: [Icon(Icons.warning_outlined), Text("Acil")],
                     )),
-                    margin: const EdgeInsets.all(
-                        10), //Dışarıya müdahale eder (Kenarlara Boşluk)
+                    margin: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                        color: Colors.red, //rengini değiştirir
-                        // ignore: prefer_const_literals_to_create_immutables
-                        shape: BoxShape.rectangle, //şekili daire yapar
+                        color: Colors.red,
+                        shape: BoxShape.rectangle,
                         borderRadius: BorderRadius.all(Radius.circular(15))),
                   ),
                 ],
@@ -190,8 +175,7 @@ class _nameState extends State<HomeScreen> {
                               fontSize: 25,
                               color: Color.fromARGB(255, 0, 154, 237)),
                         ),
-                      ) //Kendimize öz
-                      )
+                      ))
                 ]),
               )),
             ]),
@@ -268,8 +252,7 @@ class _nameState extends State<HomeScreen> {
                               fontSize: 25,
                               color: Color.fromARGB(255, 1, 251, 201)),
                         ),
-                      ) //Kendimize öz
-                      )
+                      ))
                 ]),
               )),
             ]),
@@ -307,8 +290,7 @@ class _nameState extends State<HomeScreen> {
                               fontSize: 25,
                               color: Color.fromARGB(255, 251, 218, 1)),
                         ),
-                      ) //Kendimize öz
-                      )
+                      ))
                 ]),
               )),
             ]),
@@ -346,8 +328,7 @@ class _nameState extends State<HomeScreen> {
                               fontSize: 25,
                               color: Color.fromARGB(255, 1, 122, 251)),
                         ),
-                      ) //Kendimize özel custom bir button yaptık
-                      )
+                      ))
                 ]),
               )),
             ]),
