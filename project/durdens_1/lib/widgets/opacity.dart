@@ -14,7 +14,7 @@ class opacityscreen extends StatelessWidget {
             height: 100,
             color: Colors.yellow,
             alignment: Alignment.center,
-            child: const Text('Canım Hocam'),
+            child: const Text('Opacity'),
           ),
         ),
         Opacity(
@@ -24,7 +24,7 @@ class opacityscreen extends StatelessWidget {
             height: 100,
             color: Colors.yellow,
             alignment: Alignment.center,
-            child: const Text('Canım Hocam'),
+            child: const Text('Opacity'),
           ),
         ),
         Opacity(
@@ -34,7 +34,7 @@ class opacityscreen extends StatelessWidget {
             height: 100,
             color: Colors.yellow,
             alignment: Alignment.center,
-            child: const Text('Seni Çok Seviyoruz'),
+            child: const Text('Opacity'),
           ),
         ),
       ],
