@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class opacity extends StatelessWidget {
-  const opacity({Key? key}) : super(key: key);
+class opacityscreen extends StatelessWidget {
+  const opacityscreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

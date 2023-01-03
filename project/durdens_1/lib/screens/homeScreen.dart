@@ -2,6 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:durdens_1/screens/widgetScreen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -26,9 +27,23 @@ class _nameState extends State<HomeScreen> {
               ),
             ),
           ],
-          leading: Icon(
-            Icons.menu,
-            color: Colors.black,
+          // ignore: unnecessary_new
+          leading: new Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const widgets()),
+                    );
+                  },
+                  icon: Icon(
+                    Icons.menu,
+                    color: Colors.black,
+                  ) //Icon button ekledik
+                  ),
+            ],
           ),
           centerTitle: true,
           // ignore: prefer_const_constructors
@@ -42,20 +57,23 @@ class _nameState extends State<HomeScreen> {
       body: Column(children: [
         Expanded(
           flex: 1,
-          child: Container(
-            height: 50,
-            width: 300,
-            child: TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10.0),
+          child: Padding(
+            padding: const EdgeInsets.only(top: 15),
+            child: Container(
+              height: 50,
+              width: 400,
+              child: TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(5.0),
+                  ),
+                  hintText: 'Arama yapın...',
+                  prefixIcon: Icon(Icons.search),
                 ),
-                hintText: 'Arama yapın...',
-                prefixIcon: Icon(Icons.search),
+                onChanged: (value) {
+                  // Kullanıcının girdiği değer burada işlenir
+                },
               ),
-              onChanged: (value) {
-                // Kullanıcının girdiği değer burada işlenir
-              },
             ),
           ),
         ),
@@ -67,81 +85,6 @@ class _nameState extends State<HomeScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    height: 100,
-                    width: 100,
-                    child: Center(
-                        child: Column(
-                      children: [Icon(Icons.warning_outlined), Text("Acil")],
-                    )),
-                    margin: const EdgeInsets.all(
-                        10), //Dışarıya müdahale eder (Kenarlara Boşluk)
-                    decoration: BoxDecoration(
-                        color: Colors.red, //rengini değiştirir
-                        // ignore: prefer_const_literals_to_create_immutables
-                        shape: BoxShape.rectangle, //şekili daire yapar
-                        borderRadius: BorderRadius.all(Radius.circular(15))),
-                  ),
-                  Container(
-                    height: 100,
-                    width: 100,
-                    child: Center(
-                        child: Column(
-                      children: [Icon(Icons.warning_outlined), Text("Acil")],
-                    )),
-                    margin: const EdgeInsets.all(
-                        10), //Dışarıya müdahale eder (Kenarlara Boşluk)
-                    decoration: BoxDecoration(
-                        color: Colors.red, //rengini değiştirir
-                        // ignore: prefer_const_literals_to_create_immutables
-                        shape: BoxShape.rectangle, //şekili daire yapar
-                        borderRadius: BorderRadius.all(Radius.circular(15))),
-                  ),
-                  Container(
-                    height: 100,
-                    width: 100,
-                    child: Center(
-                        child: Column(
-                      children: [Icon(Icons.warning_outlined), Text("Acil")],
-                    )),
-                    margin: const EdgeInsets.all(
-                        10), //Dışarıya müdahale eder (Kenarlara Boşluk)
-                    decoration: BoxDecoration(
-                        color: Colors.red, //rengini değiştirir
-                        // ignore: prefer_const_literals_to_create_immutables
-                        shape: BoxShape.rectangle, //şekili daire yapar
-                        borderRadius: BorderRadius.all(Radius.circular(15))),
-                  ),
-                  Container(
-                    height: 100,
-                    width: 100,
-                    child: Center(
-                        child: Column(
-                      children: [Icon(Icons.warning_outlined), Text("Acil")],
-                    )),
-                    margin: const EdgeInsets.all(
-                        10), //Dışarıya müdahale eder (Kenarlara Boşluk)
-                    decoration: BoxDecoration(
-                        color: Colors.red, //rengini değiştirir
-                        // ignore: prefer_const_literals_to_create_immutables
-                        shape: BoxShape.rectangle, //şekili daire yapar
-                        borderRadius: BorderRadius.all(Radius.circular(15))),
-                  ),
-                  Container(
-                    height: 100,
-                    width: 100,
-                    child: Center(
-                        child: Column(
-                      children: [Icon(Icons.warning_outlined), Text("Acil")],
-                    )),
-                    margin: const EdgeInsets.all(
-                        10), //Dışarıya müdahale eder (Kenarlara Boşluk)
-                    decoration: BoxDecoration(
-                        color: Colors.red, //rengini değiştirir
-                        // ignore: prefer_const_literals_to_create_immutables
-                        shape: BoxShape.rectangle, //şekili daire yapar
-                        borderRadius: BorderRadius.all(Radius.circular(15))),
-                  ),
                   Container(
                     height: 100,
                     width: 100,
@@ -191,6 +134,21 @@ class _nameState extends State<HomeScreen> {
                     decoration: BoxDecoration(
                         color: Color.fromARGB(
                             255, 63, 143, 209), //rengini değiştirir
+                        // ignore: prefer_const_literals_to_create_immutables
+                        shape: BoxShape.rectangle, //şekili daire yapar
+                        borderRadius: BorderRadius.all(Radius.circular(15))),
+                  ),
+                  Container(
+                    height: 100,
+                    width: 100,
+                    child: Center(
+                        child: Column(
+                      children: [Icon(Icons.warning_outlined), Text("Acil")],
+                    )),
+                    margin: const EdgeInsets.all(
+                        10), //Dışarıya müdahale eder (Kenarlara Boşluk)
+                    decoration: BoxDecoration(
+                        color: Colors.red, //rengini değiştirir
                         // ignore: prefer_const_literals_to_create_immutables
                         shape: BoxShape.rectangle, //şekili daire yapar
                         borderRadius: BorderRadius.all(Radius.circular(15))),
@@ -403,12 +361,12 @@ class _nameState extends State<HomeScreen> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
+            icon: Icon(Icons.widgets),
+            label: 'Widgets',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
+            icon: Icon(Icons.person),
+            label: 'Profil',
           ),
         ],
       ),
