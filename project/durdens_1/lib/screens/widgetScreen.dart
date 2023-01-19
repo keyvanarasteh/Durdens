@@ -1,3 +1,5 @@
+import 'package:durdens_1/widgets/cupertinoActionSheetWidgetScreen.dart';
+import 'package:durdens_1/widgets/cupertinoContextMenuWidget.dart';
 import 'package:durdens_1/widgets/dropdownButton.dart';
 import 'package:durdens_1/screens/homeScreen.dart';
 import 'package:durdens_1/widgets/card.dart';
@@ -269,6 +271,58 @@ class _widgetsState extends State<widgets> {
                       },
                       child: Text(
                         " Wrap widgets ",
+                        style: TextStyle(color: Colors.white),
+                      )),
+                ),
+              ),
+            ),
+            Expanded(
+              flex: 2,
+              child: Container(
+                width: 200,
+                margin: const EdgeInsets.all(2),
+                decoration: BoxDecoration(
+                    color: Colors.grey,
+                    borderRadius: BorderRadius.circular(15)),
+                child: Padding(
+                  padding: const EdgeInsets.all(4),
+                  child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const CupertinoActionSheetWidgetScreen()),
+                        );
+                      },
+                      child: Text(
+                        " CupertinoActionSheetWidget  ",
+                        style: TextStyle(color: Colors.white),
+                      )),
+                ),
+              ),
+            ),
+            Expanded(
+              flex: 2,
+              child: Container(
+                width: 200,
+                margin: const EdgeInsets.all(2),
+                decoration: BoxDecoration(
+                    color: Colors.grey,
+                    borderRadius: BorderRadius.circular(15)),
+                child: Padding(
+                  padding: const EdgeInsets.all(4),
+                  child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const CupertinoContextMenuWidget()),
+                        );
+                      },
+                      child: Text(
+                        " CupertinoContextMenu  ",
                         style: TextStyle(color: Colors.white),
                       )),
                 ),
